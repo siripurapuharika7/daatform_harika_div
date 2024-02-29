@@ -1,0 +1,9 @@
+config {
+    type: 'table',
+    database:'gcp-data-flow-410204',
+    schema:'harika',
+    name: 'orgtbl',
+    tags:['newone']
+}
+
+select t1.* from ${ref("info1")} as t1 inner join ${ref("info2")} as t2 on t1.id=t2.id

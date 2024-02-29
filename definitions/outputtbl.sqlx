@@ -1,0 +1,10 @@
+config {
+    type: 'table',
+    database:'gcp-data-flow-410204',
+    schema:'harika',
+    name: 'outputtbl',
+    dependencies:['assertion1']
+}
+
+
+select * from ${ref("orgtbl")} where country='USA'
